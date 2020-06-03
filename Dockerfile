@@ -1,4 +1,4 @@
-FROM john0879/jnlp-aws
+FROM vestmarkorg/jnlp-aws
 
 USER root
 
