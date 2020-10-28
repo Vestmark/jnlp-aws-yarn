@@ -2,7 +2,7 @@ FROM vestmarkorg/jnlp-aws
 
 USER root
 
-RUN apt-get update && apt-get install -y libgtk2.0-0 libgtk-3-0 libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
+RUN apt-get update && apt-get install -y libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
 
 # set up node and yarn
 ENV NODE_VERSION 10.19.0
