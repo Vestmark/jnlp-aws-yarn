@@ -17,4 +17,8 @@ RUN curl -SL "$NODE_DOWNLOAD_URL" --output nodejs.tar.gz \
 	&& npm i -g yarn@$YARN_VERSION \
 	&& ln -s /usr/local/bin/node /usr/local/bin/nodejs
 
+RUN sed 's+$JAVA_BIN $JAVA_OPTS+/usr/lib/jvm/openjdk-11.0.16_8/bin/java $JAVA_OPTS+g' /usr/local/bin/jenkins-agent > /usr/local/bin/jenkins-agent-java11
+
+RUN chmod +x /usr/local/bin/jenkins-agent-java11
+
 USER jenkins
